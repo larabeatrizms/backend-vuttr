@@ -42,7 +42,6 @@ const connect2Database = async (): Promise<void> => {
   await createConnection({
     type: 'postgres',
     url: process.env.DATABASE_URL,
-    port: 5432,
     username: 'postgres',
     password: 'docker',
     database: 'vuttr',
@@ -50,7 +49,6 @@ const connect2Database = async (): Promise<void> => {
     migrations: ['./src/database/migrations/*.ts'],
     cli: {
       migrationsDir: './src/database/migrations',
-      entitiesDir: './src/models/*.ts',
     },
   });
 };
