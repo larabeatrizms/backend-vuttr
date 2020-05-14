@@ -1,15 +1,15 @@
 // import { createConnection } from 'typeorm';
 // import * as PostgressConnectionStringParser from 'pg-connection-string';
 
-// // createConnection();
+// createConnection();
 
 import {
   getConnectionOptions,
   ConnectionOptions,
   createConnection,
 } from 'typeorm';
-import dotenv from 'dotenv';
-dotenv.config();
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 const getOptions = async () => {
   let connectionOptions: ConnectionOptions;
@@ -18,7 +18,7 @@ const getOptions = async () => {
     synchronize: false,
     logging: false,
     extra: {
-      ssl: false,
+      ssl: true,
     },
     entities: ['./src/models/*.ts'],
     migrations: ['./src/database/migrations/*.ts'],
