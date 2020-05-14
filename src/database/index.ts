@@ -18,7 +18,7 @@ const getOptions = async () => {
     synchronize: false,
     logging: false,
     extra: {
-      ssl: true,
+      ssl: false,
     },
     entities: ['./src/models/*.ts'],
     migrations: ['./src/database/migrations/*.ts'],
