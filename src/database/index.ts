@@ -49,10 +49,10 @@ const connect2Database = async (): Promise<void> => {
     // database: 'vuttr',
     // entities: [Tool],
     entities: [Tool],
-    migrations: ['./src/database/migrations/*.ts'],
-    cli: {
-      migrationsDir: './src/database/migrations',
-    },
+    // migrations: ['./src/database/migrations/*.ts'],
+    // cli: {
+    //   migrationsDir: './src/database/migrations',
+    // },
   });
 };
 
