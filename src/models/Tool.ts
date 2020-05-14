@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 //@Entity('tools')
-@Entity()
+@Entity('tools')
 class Tool {
   @PrimaryGeneratedColumn('uuid')
   id: string;
