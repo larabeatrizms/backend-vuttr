@@ -42,7 +42,6 @@ const connect2Database = async (): Promise<void> => {
   await createConnection({
     type: 'postgres',
     url: process.env.DATABASE_URL,
-    entities: [Tool],
   });
 };
 
