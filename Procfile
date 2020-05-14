@@ -1,1 +1,1 @@
-web: npm dev:server
+web: node dist/server.js
