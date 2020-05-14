@@ -5,7 +5,7 @@
   "username": "postgres",
   "password": "docker",
   "database": "vuttr",
-  "entities": ["./src/models/*.ts"],
+
   "migrations": ["./src/database/migrations/*.ts"],
   "cli": {
     "migrationsDir": "./src/database/migrations"
