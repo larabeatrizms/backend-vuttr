@@ -45,7 +45,7 @@ const connect2Database = async (): Promise<void> => {
     // username: 'postgres',
     // password: 'docker',
     // database: 'vuttr',
-    entities: [Tool],
+    // entities: [Tool],
     // migrations: ['./src/database/migrations/*.ts'],
     // cli: {
     //   migrationsDir: './src/database/migrations',
