@@ -28,7 +28,6 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "pg": "^8.2.0",
-    "pg-connection-string": "^2.2.2",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.24",
     "uuidv4": "^6.0.8"

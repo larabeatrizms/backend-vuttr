@@ -1,38 +1,5 @@
 // import { createConnection } from 'typeorm';
-// import * as PostgressConnectionStringParser from 'pg-connection-string';
-
 // createConnection();
-
-// import {
-//   getConnectionOptions,
-//   ConnectionOptions,
-//   createConnection,
-// } from 'typeorm';
-// import dotenv from 'dotenv';
-// dotenv.config();
-
-// const getOptions = async () => {
-//   let connectionOptions: ConnectionOptions;
-//   connectionOptions = {
-//     type: 'postgres',
-//     synchronize: false,
-//     logging: false,
-//     extra: {
-//       ssl: false,
-//     },
-//     entities: ['./src/models/*.ts'],
-//     migrations: ['./src/database/migrations/*.ts'],
-//     cli: {
-//       migrationsDir: './src/database/migrations',
-//     },
-//   };
-//   if (process.env.DATABASE_URL) {
-//     Object.assign(connectionOptions, { url: process.env.DATABASE_URL });
-//   }
-
-//   connectionOptions = await getConnectionOptions();
-//   return connectionOptions;
-// };
 
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
@@ -49,10 +16,11 @@ const connect2Database = async (): Promise<void> => {
     // database: 'vuttr',
     // entities: [Tool],
     // entities: [Tool],
-    // migrations: ['./src/database/migrations/*.ts'],
-    // cli: {
-    //   migrationsDir: './src/database/migrations',
-    // },
+    entities: ['../models/*.ts'],
+    migrations: ['./migrations/*.ts'],
+    cli: {
+      migrationsDir: './migrations',
+    },
   });
 };
 
