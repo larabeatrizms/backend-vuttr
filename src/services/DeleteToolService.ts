@@ -1,5 +1,4 @@
 import { getCustomRepository } from 'typeorm';
-import ToolRepository from '../repositories/ToolsRepository';
 import ToolsRepository from '../repositories/ToolsRepository';
 
 interface Request {
