@@ -1,21 +1,28 @@
-import { Router, request } from 'express';
+import { Router } from 'express';
 import ToolsRepository from '../repositories/ToolsRepository';
 import CreateToolService from '../services/CreateToolService';
+import DeleteToolService from '../services/DeleteToolService';
+
+import { getCustomRepository } from 'typeorm';
 
 const toolsRouter = Router();
 
-const toolsRepository = new ToolsRepository();
+// const toolsRepository = new ToolsRepository();
 
-toolsRouter.get('/', (request, response) => {
+toolsRouter.get('/', async (request, response) => {
   try {
     const { tag } = request.query;
 
+    const toolsRepository = getCustomRepository(ToolsRepository);
+
     if (!tag) {
-      const tools = toolsRepository.all();
+      const tools = await toolsRepository.find();
       return response.json(tools);
     }
-    tag.toString();
-    const filterTools = toolsRepository.tagFilter({ tag });
+
+    const filterTools = await toolsRepository.findByTags({
+      tag: tag.toString(),
+    });
 
     return response.json(filterTools);
   } catch (err) {
@@ -23,13 +30,13 @@ toolsRouter.get('/', (request, response) => {
   }
 });
 
-toolsRouter.post('/', (request, response) => {
+toolsRouter.post('/', async (request, response) => {
   try {
     const { title, link, description, tags } = request.body;
 
-    const createTool = new CreateToolService(toolsRepository);
+    const createTool = new CreateToolService();
 
-    const tool = createTool.execute({
+    const tool = await createTool.execute({
       title,
       link,
       description,
@@ -42,11 +49,13 @@ toolsRouter.post('/', (request, response) => {
   }
 });
 
-toolsRouter.delete('/:id', (request, response) => {
+toolsRouter.delete('/:id', async (request, response) => {
   try {
     const { id } = request.params;
 
-    toolsRepository.remove({ id });
+    const deleteTool = new DeleteToolService();
+
+    await deleteTool.execute({ id });
 
     return response.status(204).send();
   } catch (err) {

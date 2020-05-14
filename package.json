@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "dev:server": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/server.ts"
+    "dev:server": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/server.ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.6",
@@ -23,6 +24,8 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "pg": "^8.2.0",
+    "typeorm": "^0.2.24",
     "uuidv4": "^6.0.8"
   }
 }
