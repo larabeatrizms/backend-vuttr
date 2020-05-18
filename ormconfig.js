@@ -1,6 +1,6 @@
 // const CI_DATABASE_URL = 'postgres://test:test@postgres:5432/test';
 
-console.log('ORMCONFIG configurou');
+console.log(`ORMCONFIG configurou, DataBaseURL: ${DATABASE_URL}`);
 
 const base = {
   type: 'postgres',
@@ -8,13 +8,28 @@ const base = {
   schema: 'public',
   synchronize: false,
   logging: false,
-  entities: ['./src/models/*.ts'],
-  migrations: ['./src/database/migrations/*.ts'],
+  migrationsRun: true,
+  username: 'postgres',
+  password: 'docker',
+  database: 'vuttr',
+  entities: ['../models/*.ts'],
+  migrations: ['./migrations/*.ts'],
   cli: {
     entitiesDir: './src/models',
-    migrationsDir: './src/database/migrations',
+    migrationsDir: './migrations',
   },
-  migrationsRun: true,
+  // type: 'postgres',
+  // url: process.env.DATABASE_URL,
+  // schema: 'public',
+  // synchronize: false,
+  // logging: false,
+  // entities: ['./src/models/*.ts'],
+  // migrations: ['./src/database/migrations/*.ts'],
+  // cli: {
+  //   entitiesDir: './src/models',
+  //   migrationsDir: './src/database/migrations',
+  // },
+  // migrationsRun: true,
 };
 
 // const config = {
