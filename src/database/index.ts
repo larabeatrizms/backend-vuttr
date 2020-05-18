@@ -1,7 +1,6 @@
 // import { createConnection } from 'typeorm';
 // createConnection();
 
-import 'reflect-metadata';
 import { createConnection } from 'typeorm';
 import Tool from '../models/Tool';
 
@@ -24,6 +23,4 @@ const connect2Database = async (): Promise<void> => {
   });
 };
 
-connect2Database().then(async () => {
-  console.log('Connected to database');
-});
+export default connect2Database;
