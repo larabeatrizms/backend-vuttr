@@ -9,9 +9,9 @@ const base = {
   synchronize: false,
   logging: false,
   migrationsRun: true,
-  username: 'postgres',
-  password: 'docker',
-  database: 'vuttr',
+  username: 'xbhesezxhynube',
+  password: '7c40e26dda089d6d93e5a9235aaa83a8afbdd264a2bdd8eb4e43682338729228',
+  database: 'postgresql-cubed-02576',
   entities: ['../models/*.ts'],
   migrations: ['./migrations/*.ts'],
   cli: {
