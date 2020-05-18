@@ -12,8 +12,8 @@ const base = {
   username: 'xbhesezxhynube',
   password: '7c40e26dda089d6d93e5a9235aaa83a8afbdd264a2bdd8eb4e43682338729228',
   database: 'd2mv1jin8o0rjq',
-  entities: ['./src/models/*.ts'],
-  migrations: ['./src/database/migrations/*.ts'],
+  entities: ['./src/models/*.js'],
+  migrations: ['./src/database/migrations/*.js'],
   cli: {
     entitiesDir: './src/models',
     migrationsDir: './src/database/migrations',
