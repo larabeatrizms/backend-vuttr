@@ -1,6 +1,6 @@
 // const CI_DATABASE_URL = 'postgres://test:test@postgres:5432/test';
 
-console.log(`ORMCONFIG configurou, DataBaseURL: ${process.env.DATABASE_URL}`);
+console.log(`ORMCONFIG configurou`);
 
 const base = {
   type: 'postgres',
@@ -34,17 +34,48 @@ const base = {
 
 // const config = {
 //   test: {
-//     url: process.env.CI ? CI_DATABASE_URL : process.env.DATABASE_TEST_URL,
+//     url: process.env.CI
+//       ? process.env.DATABASE_URL
+//       : process.env.DATABASE_TEST_URL,
 //     dropSchema: true,
 //   },
-//   development: {},
+//   development: {
+//     host: 'localhost',
+//     port: 5432,
+//     url: '',
+//     username: 'postgres',
+//     password: 'docker',
+//     database: 'vuttr',
+//     entities: ['./src/models/*.ts'],
+//     migrations: ['./src/database/migrations/*.ts'],
+//     cli: {
+//       migrationsDir: './src/database/migrations',
+//     },
+//   },
 //   production: {
 //     dropSchema: false,
 //   },
 // };
 
 // module.exports = process.env.CI
-//   ? { ...base, ...config['test'] }
+//   ? { ...base }
 //   : { ...base, ...config[process.env.NODE_ENV || 'development'] };
 
-module.exports = process.env.CI ? { ...base } : { ...base };
+const development = {
+  type: 'postgres',
+  host: 'localhost',
+  port: 5432,
+  url: '',
+  username: 'postgres',
+  password: 'docker',
+  database: 'vuttr',
+  entities: ['./src/models/*.ts'],
+  migrations: ['./src/database/migrations/*.ts'],
+  cli: {
+    migrationsDir: './src/database/migrations',
+  },
+};
+
+module.exports = { ...base };
+
+// module.exports = { ...development };
