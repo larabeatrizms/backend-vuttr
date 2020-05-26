@@ -1,6 +1,6 @@
 // const CI_DATABASE_URL = 'postgres://test:test@postgres:5432/test';
 
-console.log(`ORMCONFIG configurou`);
+console.log(`Configuring ORM - Conecting...`);
 
 const base = {
   type: 'postgres',

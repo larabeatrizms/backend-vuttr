@@ -1,1 +1,1 @@
-web: ts-node -r tsconfig-paths/register src/shared/infra/http/server.ts
+web: node -r tsconfig-paths/register dist/shared/infra/http/server.js
