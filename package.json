@@ -1,7 +1,7 @@
 {
   "name": "backend-vuttr",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/shared/infra/http/server.js",
   "repository": "https://github.com/larabeatrizms/backend-vuttr.git",
   "author": "Lara Beatriz <larabeatriz@ufrn.edu.br>",
   "license": "MIT",
@@ -11,7 +11,7 @@
     "start": "ts-node -r tsconfig-paths/register src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "test": "jest",
-    "start:prod": "node -r tsconfig-paths/register dist/shared/infra/http/server.js "
+    "start:prod": "node -r tsconfig-paths/register dist/shared/infra/http/server.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.6",
@@ -38,8 +38,8 @@
     "uuidv4": "^6.0.8"
   },
   "_moduleAliases": {
-    "@modules/*": "./dist/modules/*",
-    "@config/*": "./dist/config/*",
-    "@shared/*": "./dist/shared/*"
+    "@modules": "./dist/modules",
+    "@config": "./dist/config",
+    "@shared": "./dist/shared"
   }
 }

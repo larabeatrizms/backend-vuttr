@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import 'module-alias/register';
 
 if (!process.env.IS_TS_NODE) {
   console.log('Using module alias...');

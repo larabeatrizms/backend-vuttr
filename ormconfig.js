@@ -11,8 +11,8 @@ const base = {
   entities: ['./dist/modules/**/infra/typeorm/entities/*.js'],
   migrations: ['./dist/shared/infra/typeorm/migrations/*.js'],
   cli: {
-    entitiesDir: './src/modules/**/infra/typeorm/entities',
-    migrationsDir: './src/shared/infra/typeorm/migrations',
+    entitiesDir: './dist/modules/**/infra/typeorm/entities',
+    migrationsDir: './dist/shared/infra/typeorm/migrations',
   },
   migrationsRun: true,
 };
