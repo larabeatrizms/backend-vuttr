@@ -8,11 +8,11 @@ const base = {
   schema: 'public',
   synchronize: false,
   logging: false,
-  entities: ['./dist/models/*.js'],
-  migrations: ['./dist/database/migrations/*.js'],
+  entities: ['./dist/modules/**/infra/typeorm/entities/*.js'],
+  migrations: ['./dist/shared/infra/typeorm/migrations/*.js'],
   cli: {
-    entitiesDir: './dist/models',
-    migrationsDir: './dist/database/migrations',
+    entitiesDir: './src/modules/**/infra/typeorm/entities',
+    migrationsDir: './src/shared/infra/typeorm/migrations',
   },
   migrationsRun: true,
 };
@@ -25,10 +25,10 @@ const development = {
   username: 'postgres',
   password: 'docker',
   database: 'vuttr',
-  entities: ['./src/models/*.ts'],
-  migrations: ['./src/database/migrations/*.ts'],
+  entities: ['./src/modules/**/infra/typeorm/entities/*.ts'],
+  migrations: ['./src/shared/infra/typeorm/migrations/*.ts'],
   cli: {
-    migrationsDir: './src/database/migrations',
+    migrationsDir: './src/shared/infra/typeorm/migrations',
   },
 };
 
