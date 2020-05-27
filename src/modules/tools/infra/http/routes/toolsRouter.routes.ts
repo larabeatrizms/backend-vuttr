@@ -1,9 +1,4 @@
-import { Router } from 'express';
-import ToolsRepository from '@modules/tools/infra/typeorm/repositories/ToolsRepository';
-import CreateToolService from '@modules/tools/services/CreateToolService';
-import DeleteToolService from '@modules/tools/services/DeleteToolService';
-
-import { getCustomRepository } from 'typeorm';
+import { Router, response } from 'express';
 
 import ToolsController from '../controllers/ToolsController';
 

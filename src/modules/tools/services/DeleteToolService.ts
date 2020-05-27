@@ -1,6 +1,7 @@
 import { injectable, inject } from 'tsyringe';
 
 import IToolsRepository from '@modules/tools/repositories/IToolsRepository';
+import AppError from '@shared/errors/AppError';
 
 interface Request {
   id: string;
@@ -17,7 +18,7 @@ class DeleteToolService {
     const tool = await this.toolsRepository.findById(id);
 
     if (!tool) {
-      throw new Error('There is no such tool.');
+      throw new AppError('There is no such tool.');
     }
 
     await this.toolsRepository.remove(tool);
