@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img  height=300px src="https://storage.googleapis.com/uxfolio/5df11956bf10420004ea8186/5df11a01bf10420004ea8187/YJil4xWE6LlBbGSc.png" alt="Backend para aplicação VUTTR"></a>
+ <img width=150px height=150px src="https://image.flaticon.com/icons/svg/912/912633.svg" alt="Backend para aplicação VUTTR"></a>
 </p>
 
 <h3 align="center">Backend para aplicação VUTTR</h3>
