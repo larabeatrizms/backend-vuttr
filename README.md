@@ -22,7 +22,7 @@
 ---
 
 <p align="center"> Projeto contruído com conhecimentos em Node.js e Typescript. Projeto focado nos princípios dos SOLID, DDD e TDD. 
-    <br>
+   <br>
 </p>
 
 ## 📝 Tabela de conteúdos
@@ -61,7 +61,7 @@ Criado com requisitos baseados no desafio da [Bossa Box](https://app.bossabox.co
 
 ## 🚀 Deploy<a name = "deploy"></a>
 
-Você pode utilizar a API, está aqui: `https://api-app-vuttr.herokuapp.com`
+Você pode utilizar a API, está aqui: `http://api-app-vuttr.herokuapp.com`
 
 <!-- ![Deploy API](https://i.gyazo.com/a96c1e3481fab9909a8f76f4b10bc3ad.gif) -->
 
