@@ -12,6 +12,7 @@
       "@config/*": ["config/*"],
       "@shared/*": ["shared/*"]
     },
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

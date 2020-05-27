@@ -1,0 +1,118 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "API for Very Useful Tools to Remember",
+    "description": "Challenge of Bossa-box",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "api-app-vuttr.herokuapp.com",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "VUTTR",
+      "description": "API for repository of Tools"
+    }
+  ],
+  "schemes": ["https, http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/tools": {
+      "post": {
+        "tags": ["Tool"],
+        "summary": "Add a new tool",
+        "description": "Routes for tools",
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "description": "Tool object that needs to be added",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Tool"
+            }
+          }
+        ],
+        "consumes": ["application/json", "application/xml"],
+        "produces": ["application/xml", "application/json"],
+        "responses": {
+          "200": {
+            "description": "Tool is returned"
+          }
+        }
+      },
+      "get": {
+        "tags": ["Tool"],
+        "summary": "List tools",
+        "description": "Routes for tools",
+        "parameters": [
+          {
+            "name": "tag",
+            "in": "query",
+            "description": "Tag values that need to be considered for filter",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "consumes": ["application/json", "application/xml"],
+        "produces": ["application/xml", "application/json"],
+        "responses": {
+          "200": {
+            "description": "Tools is returned"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Tool"],
+        "summary": "Delete a tool",
+        "description": "This can only be done sending a exists id.",
+        "operationId": "deleteUser",
+        "produces": ["application/xml", "application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The id that needs to be deleted",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Invalid id supplied"
+          },
+          "404": {
+            "description": "Tool not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Tool": {
+      "type": "object",
+      "required": ["id", "title", "link", "description", "tags"],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "link": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

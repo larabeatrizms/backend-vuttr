@@ -11,12 +11,18 @@ import routes from './routes';
 
 import '@shared/container';
 
+import swaggerUi from 'swagger-ui-express';
+
+import swaggerDocument from './swagger.json';
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
 app.use(routes);
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   if (err instanceof AppError) {
