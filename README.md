@@ -22,7 +22,7 @@
 ---
 
 <p align="center"> Projeto contruído com conhecimentos em Node.js e Typescript. Projeto focado nos princípios dos SOLID, DDD e TDD. 
-    <br>
+   <br>
 </p>
 
 ## 📝 Tabela de conteúdos
