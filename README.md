@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img  height=300px src="https://storage.googleapis.com/uxfolio/5df11956bf10420004ea8186/5df11a01bf10420004ea8187/YJil4xWE6LlBbGSc.png" alt="Desafio fundamentos Node.js"></a>
+ <img  height=300px src="https://storage.googleapis.com/uxfolio/5df11956bf10420004ea8186/5df11a01bf10420004ea8187/YJil4xWE6LlBbGSc.png" alt="Backend para aplicação VUTTR"></a>
 </p>
 
 <h3 align="center">Backend para aplicação VUTTR</h3>
