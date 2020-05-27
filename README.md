@@ -53,9 +53,11 @@ Criado com requisitos baseados no desafio da [Bossa Box](https://app.bossabox.co
 
 - **`GET /tools`**: Rota para listar todas as ferramentas cadastradas.
 
-- **`GET /tools?tag`**: Rota para listar ferramentas utilizando uma busca por tag, ou seja, filtrando as ferramentas de acordo com a tag recebida.
+- **`GET /tools?tag={tag}`**: Rota para listar ferramentas utilizando uma busca por tag, ou seja, filtrando as ferramentas de acordo com a tag recebida.
 
-- **`DELTE /tools/{id}`**: Rota para deletar uma ferramenta.
+- **`DELETE /tools/{id}`**: Rota para deletar uma ferramenta.
+
+- **`GET /api-docs`**: Rota com toda a documentação da API.
 
 ## 🚀 Deploy<a name = "deploy"></a>
 
@@ -73,16 +75,14 @@ Ter instalado pelo menos um gerenciador de pacotes do Node, [Npm](https://www.np
 
 ### Installing
 
-Executar na raiz do projeto o seguinte comando para instalar as dependências
+Executar na raiz do projeto o seguinte comando para instalar as dependências `yarn install` ou `npm install`
+
+Para executar a API localmente, deve ter um container com Postgress com o nome correto para que o typeorm possa se conectar ao seu banco de dados.
+
+## 🎈 Uso <a name="usage"></a>
 
 ```sh
-yarn install
-```
-
-ou
-
-```sh
-npm install
+yarn dev:server
 ```
 
 ## 🔧 Executando os testes <a name = "tests"></a>
@@ -105,16 +105,11 @@ Para essa aplicação, implementei os seguintes testes:
 
 - **`should not be able to delete a nonexistent tool`**: Para que esse teste passe, a aplicação não deve permitir deletar uma ferramenta que não exista.
 
-## 🎈 Uso <a name="usage"></a>
-
-```sh
-yarn dev:server
-```
-
 ## ⛏️ Construído utilizando <a name = "built_using"></a>
 
 - [NodeJs](https://nodejs.org/en/)
 - [Typescript](https://www.typescriptlang.org/)
+- [Docker](https://www.docker.com/)
 - [Typeorm](https://typeorm.io/#/)
 - [Postgress](https://www.postgresql.org/)
 - [Swagger](https://swagger.io/)
